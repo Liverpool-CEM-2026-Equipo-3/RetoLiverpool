@@ -1,0 +1,85 @@
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0 !important;
+}
+input[type=number] {
+    -webkit-appearance: textfield !important;
+    -moz-appearance: textfield !important;
+    appearance: textfield !important;
+}
+
+input#input-busqueda {
+    width: 560px !important;
+    max-width: 90vw !important;
+    padding: 14px 24px !important;
+    border-radius: 100px !important;
+    border: 2px solid #f7c0dd !important;
+    font-size: 14px !important;
+    color: #331b35 !important;
+    box-shadow: 0 4px 20px rgba(255, 79, 153, 0.08) !important;
+    font-family: inherit !important;
+    outline: none !important;
+    box-sizing: border-box !important;
+}
+
+input#input-busqueda:focus {
+    border-color: #ff4f99 !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(255, 79, 153, 0.15) !important;
+}
+#input-busqueda {
+    border: 2px solid #f7c0dd !important;
+}
+
+#input-busqueda ~ div,
+.dash-input-container {
+    border: none !important;
+    box-shadow: none !important;
+}
+div:has(> input#input-busqueda) {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+/* inputs numéricos del predictivo */
+.num-input {
+    width: 100%;
+    padding: 10px 14px;
+    background: white;
+    border: 1.5px solid #f7c0dd;
+    border-radius: 12px;
+    font-size: 15px;
+    color: #331b35;
+    outline: none;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.num-input:focus {
+    border-color: #ff4f99;
+}
+
+.num-input::-webkit-inner-spin-button,
+.num-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=text] {
+    border: 1.5px solid #e2e8f0 !important;
+    border-radius: 12px !important;
+    padding: 12px 16px !important;
+    font-size: 15px !important;
+    color: #331b35 !important;
+    background: #f8fafc !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    font-family: inherit !important;
+}
+
+input[type=text]:focus {
+    border-color: #ff4f99 !important;
+    outline: none !important;
+    background: white !important;
+}

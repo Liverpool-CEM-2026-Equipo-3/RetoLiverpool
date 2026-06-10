@@ -1,0 +1,43 @@
+-- ============================================================
+-- DATA WAREHOUSE - Liverpool Marcas
+-- ============================================================
+
+-- Tabla de dimensión: MARCAS_FINAL
+CREATE TABLE IF NOT EXISTS MARCAS_FINAL (
+    marca_id            VARCHAR     PRIMARY KEY,
+    expediente          INTEGER,
+    denominacion        VARCHAR,
+    tipo                VARCHAR,
+    numero_registro     INTEGER,
+    clase               VARCHAR,
+    descripcion         TEXT,
+    fecha_presentacion  DATE,
+    estatus_tramite     VARCHAR,
+    estatus_marca       VARCHAR,
+    fecha_vencimiento   DATE,
+    fecha_concesion     DATE
+);
+
+-- Tabla de hechos: VENTAS_FINAL
+CREATE TABLE IF NOT EXISTS VENTAS_FINAL (
+    marca_id                VARCHAR     REFERENCES MARCAS_FINAL(marca_id),
+    denominacion            VARCHAR,
+    descripcion             TEXT,
+    total_sales             FLOAT,
+    revenue                 FLOAT,
+    antiguedad_de_la_marca  INTEGER,
+    num_leads_en_web        FLOAT,
+    calificacion_promedio   FLOAT,
+    numero_de_devoluciones  FLOAT,
+    renovo                  VARCHAR,
+    particip_de_mercado     FLOAT,
+    avg_market_share        FLOAT,
+    crecimiento_total_sales FLOAT,
+    pct_costo               FLOAT,
+    costo_por_pieza         INTEGER,
+    costo_ops_total         FLOAT,
+    margen_neto_marca       FLOAT,
+    revenue_por_lead        FLOAT,
+    roi_marca               FLOAT,
+    ratio_dev_revenue       FLOAT
+);
